@@ -14,4 +14,6 @@ public class Message {
     private String receiverId;
     private String message;
     private String date;
+
+    public Message() {}
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ChatService implements IChatService {
@@ -26,4 +27,11 @@ public class ChatService implements IChatService {
         chatrooms = chatRepository.findAll();
         return chatrooms;
     }
+
+    @Override
+    public Optional<ChatRoom> getChatRoomById(String id) {
+        return chatRepository.findById(id);
+    }
+
+
 }
