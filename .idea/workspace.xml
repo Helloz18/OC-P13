@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d3e21b95-baea-41d7-9471-28b405b12f36" name="Changes" comment="add openAPI dependency">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oc/chat/ChatApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oc/chat/controller/ChatRoomController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oc/chat/model/ChatRoom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oc/chat/model/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oc/chat/repository/ChatRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oc/chat/repository/MessageRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oc/chat/service/ChatService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oc/chat/service/IChatService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oc/chat/service/IMessageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oc/chat/service/MessageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/oc/chat/ChatApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2mFKrvFvGpbVPwZ6VnOZ67FXxCS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ChatApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "developp",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/hf281/Documents/04-OC/P3/api"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="ChatApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.oc.chat.ChatApplication" />
+      <module name="chat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.oc.chat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ChatApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d3e21b95-baea-41d7-9471-28b405b12f36" name="Changes" comment="" />
+      <created>1726667087104</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726667087104</updated>
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1726668151890</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726668151890</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add connection to database masked in env.properties">
+      <option name="closed" value="true" />
+      <created>1726668560400</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726668560400</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add model, controller and services">
+      <option name="closed" value="true" />
+      <created>1726671201143</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726671201143</updated>
+    </task>
+    <task id="LOCAL-00004" summary="get chatrooms and post chatroom">
+      <option name="closed" value="true" />
+      <created>1726673682441</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726673682441</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add openAPI dependency">
+      <option name="closed" value="true" />
+      <created>1726673711621</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1726673711621</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="developp" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="add connection to database masked in env.properties" />
+    <MESSAGE value="add model, controller and services" />
+    <MESSAGE value="get chatrooms and post chatroom" />
+    <MESSAGE value="add openAPI dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="add openAPI dependency" />
+  </component>
+</project>

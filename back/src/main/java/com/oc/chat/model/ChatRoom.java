@@ -15,6 +15,9 @@ public class ChatRoom {
 
     @Id
     private String id;
+    private Long clientId;
+    private Long supportId;
+    private boolean status;
     private List<Message> messages;
 
     public ChatRoom() {

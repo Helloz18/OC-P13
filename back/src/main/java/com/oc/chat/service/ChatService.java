@@ -1,6 +1,7 @@
 package com.oc.chat.service;
 
 import com.oc.chat.model.ChatRoom;
+import com.oc.chat.model.Message;
 import com.oc.chat.repository.ChatRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,13 @@ public class ChatService implements IChatService {
     @Override
     public Optional<ChatRoom> getChatRoomById(String id) {
         return chatRepository.findById(id);
+    }
+
+    @Override
+    public void saveMessage(Message message, String chatRoomId) {
+        ChatRoom chatRoom = chatRepository.findById(chatRoomId).orElseThrow();
+        List<Message> messages = chatRoom.getMessages();
+        messages.add(message);
     }
 
 
