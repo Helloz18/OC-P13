@@ -26,17 +26,12 @@ public class ChatRoomController {
         return chatService.getAllChatRooms();
     }
 
-    @PostMapping("/chatroom")
-    public ResponseEntity createChatRoom(@RequestBody ChatRoom chatRoom) {
-        chatService.createChatRoom(chatRoom);
-        return ResponseEntity.ok().body(chatRoom);
-    }
 
     @MessageMapping("/chat.sendMessage")
     @SendTo("/chat/messages")
-    public Message sendMessage(Message message, String chatRoomId) throws Exception {
+    public Message sendMessage(Message message) throws Exception {
         // Sauvegarde du message dans MongoDB
-        chatService.saveMessage(message, chatRoomId);
+        chatService.saveMessage(message);
         return message; // Diffuse le message à tous les abonnés de /chat/messages
     }
 }

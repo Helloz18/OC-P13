@@ -14,5 +14,5 @@ public interface IChatService {
 
     Optional<ChatRoom> getChatRoomById(String chatRoomId);
 
-    void saveMessage(Message message, String chatRoomId);
+    void saveMessage(Message message);
 }

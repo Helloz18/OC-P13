@@ -7,9 +7,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class UserController {
@@ -22,6 +22,24 @@ public class UserController {
     public ResponseEntity createUser(@RequestBody User user) {
         userService.saveUser(user);
         return ResponseEntity.ok().body(user);
+    }
+
+    @GetMapping("/users")
+    public ResponseEntity<List<User>> findUser() {
+        List<User>
+                users = userService.findAllUsers();
+        return ResponseEntity.ok().body(users);
+    }
+
+    @PostMapping("/user/connect")
+    public ResponseEntity<String> connectUser(@RequestParam String username) {
+        userService.connectUser(username);
+        return ResponseEntity.ok().body(username +" is connected");
+    }
+    @PostMapping("/user/disconnect")
+    public ResponseEntity<String> disconnectUser(@RequestParam String username) {
+        userService.connectUser(username);
+        return ResponseEntity.ok().body(username +" is disconnected");
     }
 
     @MessageMapping("/user.addUser")
