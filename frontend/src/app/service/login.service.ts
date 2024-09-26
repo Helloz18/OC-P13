@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
 
-  
+  public username: string = "";
+
   constructor(private http: HttpClient) { }
 
   

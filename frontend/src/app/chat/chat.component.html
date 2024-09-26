@@ -1,1 +1,25 @@
-<p>chat works!</p>
+<div>
+<h2>Chat with Support</h2>
+    <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="message">Message : </label>
+        <input
+          id="message"
+          type="text"
+          formControlName="message"
+          class="form-control"
+        />
+      </div>
+  
+      <div>
+        <button type="submit">Send</button>
+      </div>
+    </form>
+
+    <hr>
+    <div *ngFor="let chat of messages">
+        {{chat.sender}}
+        {{chat.content}}
+        {{chat.date}}
+    </div>
+  
