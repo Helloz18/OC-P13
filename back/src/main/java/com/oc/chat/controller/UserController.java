@@ -39,9 +39,9 @@ public class UserController {
         return ResponseEntity.ok().body(new ResponseInfo(username + " is connected"));
     }
     @PostMapping("/user/disconnect")
-    public ResponseEntity<String> disconnectUser(@RequestParam String username) {
+    public ResponseEntity<ResponseInfo> disconnectUser(@RequestParam String username) {
         userService.connectUser(username);
-        return ResponseEntity.ok().body(username +" is disconnected");
+        return ResponseEntity.ok().body(new ResponseInfo(username + " is disconnected"));
     }
 
     @MessageMapping("/user.addUser")

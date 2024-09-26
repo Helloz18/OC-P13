@@ -1,5 +1,6 @@
 <div>
 <h2>Chat with Support</h2>
+<div *ngIf="supportConnected.length <= 0">No chat available</div>
     <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
       <div>
         <label for="message">Message : </label>

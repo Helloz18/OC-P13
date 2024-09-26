@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { LoginService } from '../service/login.service';
 import { CommonModule } from '@angular/common';
 import { Chat } from '../interfaces/chat';
+import { User } from '../interfaces/user';
 
 @Component({
   selector: 'app-chat',
@@ -15,6 +16,8 @@ import { Chat } from '../interfaces/chat';
 })
 export class ChatComponent implements OnInit{
 
+  users: User[] = [];
+  supportConnected: User[] = [];
 
   messageForm!: FormGroup;
   submitted = false;
@@ -26,6 +29,7 @@ export class ChatComponent implements OnInit{
   constructor(private formBuilder: FormBuilder, private messageService: MessagingService, private router : Router, private loginService: LoginService) {}
 
   ngOnInit(): void {
+    this.userList();
     this.username = this.loginService.username;
     this.messageForm = this.formBuilder.group({
       message: ['']
@@ -34,5 +38,15 @@ export class ChatComponent implements OnInit{
 
   onSubmit() {
     console.log(this.messageForm.value.message + " " + this.username);
+    }
+
+    userList() {
+      this.messageService.getAllUsers().subscribe({
+        next:(data) => {
+          this.users = data;
+          console.log(data);
+          this.supportConnected = this.users.filter((user) => user.role == "support" ).filter((result) => result.status==true);
+        }
+      })
     }
 }
