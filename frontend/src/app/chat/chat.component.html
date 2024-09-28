@@ -1,26 +1,51 @@
 <div>
-<h2>Chat with Support</h2>
-<div *ngIf="supportConnected.length <= 0">No chat available</div>
-    <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
-      <div>
-        <label for="message">Message : </label>
-        <input
-          id="message"
-          type="text"
-          formControlName="message"
-          class="form-control"
-        />
-      </div>
-  
-      <div>
-        <button type="submit">Send</button>
-      </div>
-    </form>
+  <div>
+    <button type="button" class="btnLogout" (click)="logout()">LogOut</button>
+  </div>
+  <div class="questionPosition">
+    <h2>Chat with Support</h2>
 
-    <hr>
-    <div *ngFor="let chat of messages">
-        {{chat.sender}}
-        {{chat.content}}
-        {{chat.date}}
+    <div *ngIf="!supportConnected">No chat available</div>
+    <div *ngIf="supportConnected">
+      <div *ngIf="connectedUser.role != 'support'">
+        Hello {{ username }}, enter your question
+      </div>
+      <div *ngIf="connectedUser.role == 'support'">
+        Enter your answer, {{ username }}
+      </div>
+      <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="message"></label>
+          <textarea
+            rows="5"
+            cols="33"
+            id="message"
+            type="textarea"
+            formControlName="message"
+            class="form-control"
+          ></textarea>
+        </div>
+
+        <div>
+          <button type="submit" class="btn">Send</button>
+        </div>
+        &nbsp;
+      </form>
     </div>
-  
+  </div>
+
+  <hr />
+
+  <div *ngFor="let chat of messages" class="chatPosition">
+    <div
+      [ngClass]="{
+        left: username == chat.senderName,
+        right: username != chat.senderName
+      }"
+    >
+      {{ chat.senderName }} <br />
+      {{ chat.content }}<br />
+      {{ chat.date | date : "shortDate" }}
+    </div>
+  </div>
+</div>

@@ -21,13 +21,17 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public void connectUser(String username) {
+    public User connectUser(String username) {
         User user = userRepository.findByUsername(username);
-        if(user.isStatus()) {
-            user.setStatus(false);
-        } else {
             user.setStatus(true);
-        }
         userRepository.save(user);
+        return user;
+    }
+
+    public User disconnectUser(String username) {
+        User user = userRepository.findByUsername(username);
+        user.setStatus(false);
+        userRepository.save(user);
+        return user;
     }
 }

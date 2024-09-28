@@ -12,9 +12,11 @@ public class Message {
 
     @Id
     private String id;
-    private String senderId;
-    private String receiverId;
-    private String message;
+    private Long senderId;
+    private String senderName;
+    private Long receiverId;
+    private String receiverName;
+    private String content;
     private String date;
 
     public Message() {}

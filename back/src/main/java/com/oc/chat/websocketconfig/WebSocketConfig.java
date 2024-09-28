@@ -10,14 +10,22 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 @EnableWebSocketMessageBroker
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
+    /**
+     * Messages will be sent on /chat endpoint from the app
+     * @param config
+     */
     @Override
     public void configureMessageBroker(MessageBrokerRegistry config) {
-        config.enableSimpleBroker("/chat"); // Définit où les messages seront envoyés
-        config.setApplicationDestinationPrefixes("/app"); // Préfixe pour les messages envoyés par le client
+        config.enableSimpleBroker("/chat");
+        config.setApplicationDestinationPrefixes("/app");
     }
 
+    /**
+     * Open a connection to frontend on /ws endpoint for websocket
+     * @param registry
+     */
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/ws").setAllowedOrigins("*").withSockJS(); // Point de connexion WebSocket
+        registry.addEndpoint("/ws").setAllowedOrigins("http://localhost:4200").withSockJS();
     }
 }

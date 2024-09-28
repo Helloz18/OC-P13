@@ -8,14 +8,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class ChatRoomController {
 
     @Autowired
@@ -26,12 +24,16 @@ public class ChatRoomController {
         return chatService.getAllChatRooms();
     }
 
-
+    /**
+     * messages send by the frontend to /chat.sendMessages are then put in /chat/messages
+     * @param message
+     * @return
+     * @throws Exception
+     */
     @MessageMapping("/chat.sendMessage")
     @SendTo("/chat/messages")
     public Message sendMessage(Message message) throws Exception {
-        // Sauvegarde du message dans MongoDB
         chatService.saveMessage(message);
-        return message; // Diffuse le message à tous les abonnés de /chat/messages
+        return message;
     }
 }
