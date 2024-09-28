@@ -1,0 +1,22 @@
+<div class="login-container">
+  <h2>Connexion</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">Nom d'utilisateur:</label>
+      <input
+        id="username"
+        type="text"
+        formControlName="username"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f['username'].errors }"
+      />
+      <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+        Le nom d'utilisateur est requis.
+      </div>
+    </div>
+
+    <div>
+      <button type="submit" class="btn">Connexion</button>
+    </div>
+  </form>
+</div>
