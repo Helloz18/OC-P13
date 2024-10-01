@@ -17,9 +17,10 @@ Le backend est développé avec :
 Dans le dossier resources du backend, ajouter un fichier <strong>env.properties</strong>
 Indiquez vos connections à la base de données (par exemple) :
 
-spring.data.mongodb.host=localhost
-spring.data.mongodb.port=27017
-spring.data.mongodb.database=chat_db
+|spring.data.mongodb.host=localhost|
+|---|
+spring.data.mongodb.port=27017|
+spring.data.mongodb.database=chat_db|
 
 
 ### Démarrer le backend
@@ -30,6 +31,8 @@ Dans le terminal, entrez la commande :
 
 Le backend tourne sur le port 8080. Quelques endpoints sont disponibles.
 http://localhost:8080/swagger-ui/index.html
+
+\
 ![Aperçu des endpoints disponibles dans le swagger](/img/swagger.png "Endpoints Swagger")
 
 
