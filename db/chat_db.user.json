@@ -1,0 +1,14 @@
+[{
+  "_id": 1,
+  "username": "client",
+  "role": "client",
+  "status": false,
+  "_class": "com.oc.chat.model.User"
+},
+{
+  "_id": 2,
+  "username": "support",
+  "role": "support",
+  "status": false,
+  "_class": "com.oc.chat.model.User"
+}]
